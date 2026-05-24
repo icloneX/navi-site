@@ -1,0 +1,998 @@
+/* скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #040101 55%, #FFE628 93%);
+    min-height: 100vh; 
+    background-attachment: fixed; 
+}
+
+/* головний контейнер сайту */
+.site-wrapper {
+    max-width: 1164px;
+    width: 100%;
+    height: auto; 
+    min-height: 100vh; 
+    margin: 0 auto;    
+    background-color: rgba(53, 52, 52, 0.5); 
+    display: flex;
+    flex-direction: column; 
+}
+
+/* шапка і навігація */
+.main-header {
+    width: 100%; 
+    height: 153px;     
+    background-color: #332F1C; 
+    position: relative; 
+}
+
+.nav-bar {
+    background-color: #18181A; 
+    width: 850px; 
+    height: 70px;  
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; /* Додано, щоб меню тримався лівого краю */
+}
+
+/* меню */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; 
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* ховаємо текст "МЕНЮ" на ПК */
+.menu-title {
+    display: none; 
+}
+
+.nav-logo {
+    height: 45px; 
+    margin-right: 20px; 
+}
+
+.nav-links {
+    list-style: none; 
+    display: flex;
+    gap: 45px; 
+}
+
+.nav-links a {
+    font-family: 'Inter', sans-serif; 
+    font-size: 24px;                  
+    font-weight: bold;                
+    color: white;
+    text-decoration: none; 
+    letter-spacing: 1px; 
+}
+
+.nav-links a:hover {
+    color: #FFE600; 
+}
+
+.header-text {
+    font-family: 'Abel', sans-serif; 
+    font-size: 11px;                 
+    font-weight: normal;             
+    position: absolute;
+    bottom: 12px; 
+    right: 20px;  
+    color: white;
+    text-align: left; 
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    opacity: 0.8; 
+}
+
+/* банери */
+.hero-banners {
+    width: 100%; 
+}
+
+.banner-katka {
+    width: 100%; 
+    height: 197px; 
+    display: flex;
+}
+
+.banner-katka img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* головні новини */
+.featured-news {
+    width: 1164px;
+    height: 554px; 
+    margin: 0 auto;
+    display: flex; 
+}
+
+.featured-big {
+    width: 582px; 
+    height: 554px;
+    position: relative; 
+    flex-shrink: 0; 
+}
+
+.featured-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.featured-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px; 
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); 
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.featured-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 0.05em; 
+    line-height: 1.2;
+}
+
+.featured-meta {
+    font-family: '42dot Sans', sans-serif; 
+    font-weight: normal;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.05em; 
+    opacity: 0.8; 
+}
+
+.featured-small-grid {
+    width: 582px;
+    height: 554px;
+    display: grid; 
+    grid-template-columns: 291px 291px; 
+    grid-template-rows: 277px 277px;    
+}
+
+.featured-small {
+    width: 291px;
+    height: 277px;
+    position: relative; 
+}
+
+.featured-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.featured-content-small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px; 
+    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent); 
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.featured-title-small {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 18px; 
+    color: white;
+    letter-spacing: 0.05em; 
+    line-height: 1.2;
+}
+
+.featured-meta-small {
+    font-family: '42dot Sans', sans-serif;
+    font-weight: normal;
+    font-size: 12px; 
+    color: white;
+    letter-spacing: 0.05em; 
+    opacity: 0.8; 
+}
+
+/* сітка колонок */
+.main-content {
+    display: flex; 
+    flex-direction: row;
+    width: 100%; 
+    flex-grow: 1; 
+}
+
+.left-column {
+    width: 65%; 
+    background-color: rgba(210, 210, 210, 0.55); 
+    padding-top: 57px;  
+    padding-left: 51px; 
+    padding-bottom: 50px; 
+    color: black;
+}
+
+.right-column {
+    width: 35%; 
+    background-color: rgba(238, 234, 234, 0.55); 
+    padding-top: 57px;  
+    padding-left: 0; 
+    padding-right: 0;    
+    padding-bottom: 50px; 
+    color: black;
+}
+
+/* заголовки секцій */
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.1em; 
+    line-height: 1;
+    margin-bottom: 0; 
+}
+
+.left-column .section-title {
+    margin-bottom: 18px;
+}
+
+.right-title-wrapper {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 18px; 
+}
+
+.yellow-line {
+    width: 3px;
+    height: 24px; 
+    background-color: #FFE600;
+}
+
+.right-title-wrapper .section-title {
+    margin-left: 12px; 
+}
+
+/* список новин ліворуч */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 47px; 
+    margin-bottom: 14px; 
+}
+
+.news-item {
+    width: 659px;
+    height: 174px;
+    background: linear-gradient(90deg, rgba(119, 105, 26, 0.2) 23%, rgba(0, 0, 0, 0.2) 81%);
+    display: flex; 
+    align-items: flex-start;  
+    position: relative; 
+}
+
+.news-item-img {
+    width: 238px;
+    height: 174px;
+    object-fit: cover;
+    flex-shrink: 0;
+    z-index: 1; 
+}
+
+.game-icon {
+    position: absolute;
+    top: 10px;    
+    left: 10px;   
+    width: 24px;  
+    height: 24px;
+    z-index: 2;   
+    object-fit: contain; 
+}
+
+.news-item-text {
+    padding: 20px 30px 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.news-line-1 {
+    font-family: '42dot Sans', sans-serif;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 0.05em; 
+}
+
+.news-line-1 b { font-weight: 700; }
+
+.news-line-2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    line-height: 1.2;
+}
+
+.news-line-3 {
+    font-family: '42dot Sans', sans-serif;
+    font-weight: 600; 
+    font-size: 12px;
+    color: black;
+    letter-spacing: 0.05em; 
+}
+
+/* спільні стилі для сірих кнопок */
+.all-news-btn, .all-videos-btn, .all-merch-btn {
+    width: 659px; 
+    height: 40px;
+    background-color: rgba(180, 180, 180, 0.6); 
+    color: #333;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.all-news-btn:hover, .all-videos-btn:hover, .all-merch-btn:hover {
+    background-color: #FFE600; 
+    color: black;
+}
+
+/* майбутні матчі */
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 44px; 
+    margin-left: 15px; 
+}
+
+.match-card {
+    width: 372px;
+    height: 86px;
+    background: linear-gradient(90deg, rgba(119, 105, 26, 0.2) 23%, rgba(0, 0, 0, 0.2) 81%);
+    border: 2px solid white; 
+    box-sizing: border-box;  
+    display: flex;
+}
+
+.match-game {
+    width: 56px;
+    height: 100%; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.match-game img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.match-info {
+    flex-grow: 1;
+    padding: 0 10px 0 12px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px; 
+}
+
+.match-date {
+    font-family: '42dot Sans', sans-serif;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 0.05em; 
+}
+
+.match-date b { font-weight: 700; }
+
+.match-teams {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.team img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.team span {
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700; 
+    color: black;
+    letter-spacing: 0.03em; 
+}
+
+.match-vs {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4); 
+    letter-spacing: 0.03em; 
+}
+
+/* відео секція */
+.video-section {
+    margin-top: 56px; 
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 325px 325px; 
+    column-gap: 9px;    
+    row-gap: 24px;      
+    margin-bottom: 14px; 
+}
+
+.video-card {
+    width: 325px;
+    height: 190px;
+    background-color: #000; 
+    overflow: hidden;
+    position: relative; 
+}
+
+.video-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; 
+}
+
+.video-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; 
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 2; 
+}
+
+.video-content-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end; 
+    padding: 12px 12px 12px 15px; 
+    z-index: 3; 
+}
+
+.video-text-side {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+    color: white;
+}
+
+.video-meta-top {
+    font-family: '42dot Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em; 
+}
+
+.video-meta-top b {
+    font-weight: 600; 
+}
+
+.video-title-bottom {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 16px; 
+    line-height: 1.2;
+}
+
+.video-play-btn {
+    width: 38px;
+    height: 38px;
+    background-color: #FFE600; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+.video-play-btn img {
+    width: 20px; 
+    height: 20px;
+    object-fit: contain;
+}
+
+.video-link {
+    text-decoration: none; 
+    display: block;        
+}
+
+/* історія матчів */
+.history-section {
+    margin-top: 65px; 
+}
+
+.history-title {
+    margin-bottom: 19px; 
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;      
+    margin-left: 15px; 
+}
+
+.history-card {
+    width: 372px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hc-top {
+    display: flex;
+    height: 64px; 
+    width: 100%;
+}
+
+.hc-tour-logo {
+    width: 74px;
+    height: 100%;
+    background-color: rgba(230, 205, 121, 0.98); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hc-tour-logo img {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+}
+
+.hc-tour-info {
+    width: 298px; 
+    height: 100%;
+    background-color: #E6CD79; 
+    display: flex;
+    justify-content: space-between; 
+    padding: 12px 15px; 
+}
+
+.hc-tour-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hc-tour-name, .hc-tour-date {
+    font-family: '42dot Sans', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 0.05em; 
+}
+
+.hc-tour-stage {
+    font-family: '42dot Sans', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #797878; 
+    letter-spacing: 0.05em; 
+}
+
+.hc-bottom {
+    display: flex;
+    height: 86px; 
+    width: 100%;
+}
+
+.hc-game-logo {
+    width: 74px;
+    height: 100%;
+    background-color: #E5C02A; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hc-game-logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.hc-match-details {
+    width: 298px;
+    height: 100%;
+    background-color: #F6D759; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 21px; 
+    padding-right: 15px;
+    gap: 12px; 
+}
+
+.hc-team-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hc-team-name-group {
+    display: flex;
+    align-items: center;
+    gap: 2px; 
+}
+
+.hc-team-name-group img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.hc-team-name-group span {
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.03em; 
+}
+
+.hc-score {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.score-dash.win { color: #8DC244; } 
+.score-dash.loss { color: #E74C3C; } 
+.score-num { color: #5B6B80; }
+
+/* банер litkovska справа */
+.side-banner.litkovska-ad {
+    margin-top: 93px; 
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+.side-banner.litkovska-ad .banner-img {
+    width: 332px;
+    height: 486px;
+    object-fit: cover; 
+}
+
+/* мерч */
+.shop-section {
+    margin-top: 56px; 
+}
+
+/* горизонтальний скрол для товарів */
+.shop-grid {
+    display: flex;           
+    overflow-x: auto;        
+    gap: 30px;               
+    margin-bottom: 20px;
+    padding-bottom: 10px;    
+    padding-right: 51px;
+    scrollbar-width: none; 
+}
+
+.shop-grid::-webkit-scrollbar {
+    display: none; 
+}
+
+.shop-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex-shrink: 0; 
+    width: 247px; 
+}
+
+.product-img-box {
+    width: 247px;
+    height: 312px; 
+    background: linear-gradient(90deg, rgba(110, 90, 24, 0.5) 23%, rgba(65, 65, 65, 0.5) 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.shop-card:hover .product-img-box {
+    background: linear-gradient(90deg, rgba(110, 90, 24, 0.7) 23%, rgba(65, 65, 65, 0.7) 80%);
+}
+
+.product-img-box img {
+    width: 80%; 
+    height: 80%;
+    object-fit: contain;
+}
+
+.product-name {
+    font-family: '42dot Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600; 
+    color: #555555; 
+    line-height: 1.4;
+    margin-bottom: 8px;
+    width: 247px; 
+}
+
+.product-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.all-merch-btn {
+    margin-bottom: 40px; 
+}
+
+/* підвал / navination банер */
+.bottom-banner {
+    width: 100%; 
+    height: 247px;
+    background-color: #332F1C; 
+    position: relative; 
+    padding-top: 54px;  
+    padding-left: 43px; 
+    box-sizing: border-box;
+}
+
+.bb-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2; 
+}
+
+.bb-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 26px; 
+}
+
+.bb-desc {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 19px; 
+    line-height: 1.4;
+}
+
+.bb-actions {
+    display: flex;
+    align-items: center;
+    gap: 217px; 
+}
+
+.bb-btn {
+    width: 121px;
+    height: 39px;
+    background-color: #FFE600; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; 
+    font-size: 16px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    text-decoration: none; 
+}
+
+.bb-btn:hover {
+    background-color: #e6cf00; 
+}
+
+.bb-socials {
+    display: flex;
+    gap: 20px; 
+}
+
+.bb-socials img {
+    width: 31px;
+    height: 31px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* тіп збоку банера */
+.bb-person {
+    position: absolute;
+    bottom: 0;   
+    right: 40px; 
+    width: 394px;
+    height: 280px; 
+    object-fit: contain;
+    z-index: 1; 
+}
+
+
+/*адаптив під мобілку*/
+@media (max-width: 768px) {
+    
+    .site-wrapper { width: 100%; }
+
+    /* меню */
+    .header-text { display: none; } 
+    .nav-bar { width: 100%; }
+    .main-header { height: 70px; }
+    
+    .nav-logo { margin-right: 0; } 
+    .hamburger { display: flex; }  
+
+    .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        gap: 0;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: #2A2A2A; 
+        z-index: 10;
+    }
+
+    /* для JS */
+    .nav-links.open { 
+        display: flex; 
+    }
+
+    .menu-title {
+        display: block;
+        color: #888;
+        font-size: 12px;
+        padding: 10px 15px;
+        background-color: #222;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid #3c3c3c;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    .featured-news { 
+        width: 100%; 
+        height: auto; 
+        flex-direction: row; 
+        overflow-x: auto;    
+        scrollbar-width: none; 
+    }
+    .featured-news::-webkit-scrollbar { display: none; }
+
+    .featured-small-grid { 
+        display: contents; 
+    }
+    
+    .featured-big, .featured-small { 
+        width: 100vw; 
+        height: 100vw; 
+        flex-shrink: 0; 
+    }
+
+    .main-content { flex-direction: column; }
+    .left-column, .right-column { 
+        width: 100%; 
+        padding: 20px 15px; 
+    }
+
+    .all-news-btn, .all-videos-btn, .all-merch-btn { width: 100%; }
+
+    .news-list { 
+        flex-direction: row; 
+        overflow-x: auto; 
+        scrollbar-width: none; 
+        width: 100%; 
+        padding-bottom: 10px; 
+    }
+    .news-list::-webkit-scrollbar { display: none; }
+    
+    .news-item { 
+        flex-direction: column; 
+        width: 85vw; 
+        height: auto; 
+        flex-shrink: 0; 
+    }
+    .news-item-img { width: 100%; height: 200px; }
+    .news-item-text { padding: 15px; }
+
+    .video-grid { grid-template-columns: 1fr; width: 100%; }
+    .video-card { width: 100%; height: 55vw; }
+
+    .matches-list, .history-list { margin-left: 0; width: 100%; }
+    .match-card, .history-card { width: 100%; }
+    .hc-tour-info, .hc-match-details { width: calc(100% - 74px); }
+
+    .shop-grid { gap: 10px; padding-right: 15px; }
+    .shop-card, .product-img-box, .product-name { width: 150px; }
+    .product-img-box { height: 200px; }
+
+    .side-banner.litkovska-ad .banner-img { width: 100%; height: auto; }
+
+    .bottom-banner { 
+        height: auto; 
+        padding: 40px 15px 0; 
+        text-align: center; 
+        overflow: hidden; 
+    }
+    .bb-actions { 
+        flex-direction: column; 
+        gap: 20px; 
+        align-items: center; 
+    }
+    .bb-btn { width: 100%; max-width: 300px; }
+    
+    .bb-person { 
+        position: relative; 
+        right: auto; 
+        width: 100%; 
+        max-width: 320px; 
+        display: block; 
+        margin: 20px auto 0; 
+        top: 15px; 
+    }
+}
